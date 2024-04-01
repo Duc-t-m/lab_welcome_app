@@ -1,0 +1,12 @@
+- Go to android/app/build.gradle and change namespace (line 27) and applicationId (line 46) to your desired name
+- Go to https://console.firebase.google.com and setup a new project for Android as Firebase instructions, specifically:
+  - Application ID is the same as the previous step
+  - Download google-services.json and place it in android/app/
+  - Add plugins and dependencies to android/build.gradle and android/app/build.gradle (this is already done in this project)
+- In Firebase -> Authentication, add a new sign-in method for Email/Password
+- Open Android Studio terminal and run 
+  - npm install -g firebase-tools (install npm if you don't have it)
+  - firebase login (and login with your Google account)
+  - dart pub global activate flutterfire_cli
+  - flutterfire configure
+- Run project 
